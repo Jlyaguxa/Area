@@ -1,0 +1,111 @@
+
+
+html{
+  font-size: 15px;
+  font-family: var(--font-family);
+}
+
+.wrapper{
+  min-height: 100vh;
+  min-width: 100vh;
+
+}
+
+.container{
+  margin: 0 auto;
+  width: 80rem;
+
+}
+
+.btn{
+  border-radius: 2rem;
+  background-color: #DFECC6;
+  width: 128px;
+  height: 48px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+/* ------------------------- */
+
+.header-top--inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.header-top--logo{
+  font-family: var(--second-family);
+  font-weight: medium;
+  font-size: 30px;
+}
+.header-top--nav-list{
+  display: flex;
+  gap: 2rem;
+  font-family: var(--second-family);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 140%;
+  letter-spacing: -2.5%;
+}
+.header-top--nav-list--item:hover{
+  text-decoration: underline;
+}
+
+.header-top--btn{
+  background-color: #485C11;
+}
+.header-top--btn-link{
+  padding: 14px 24px;
+  color: #ffffff;
+  position:relative;
+  transition: .3s;
+  line-height: 140%;
+  letter-spacing: -2.5%;
+}
+
+.header-top--btn-link::after{
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 20px;
+  background-image: url("../images/icons/Arrow.svg");
+  background-repeat: no-repeat;
+  margin-left: 6px; 
+  top: 29%;
+  position: absolute;
+  transition: .3s;
+}
+.header-top--btn-link:hover::after{
+  top: 21%;
+}
+
+.header-body--title{
+  text-align: center;
+  font-size: 160px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  line-height: 85%;
+  letter-spacing: -5%;
+}
+
+.header-body--content{
+
+  min-width: auto;
+  height: 24rem;
+  
+  padding-top: 12.6rem;
+  position: relative;
+  overflow: hidden;
+}
+.header-body--content-image{
+  position: absolute;
+  left: 11%;
+  bottom: -25%;
+}
+.header-body--content-color--block{
+  height: 24rem;
+  background-color: #8E9C78;
+  border-radius: 30px;
+}

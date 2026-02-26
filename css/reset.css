@@ -1,0 +1,11 @@
+ul, ol{
+  list-style: none;
+}
+a:active,
+a:hover, 
+a {
+  text-decoration: none;
+}
+a{
+  color: #000000;
+}
