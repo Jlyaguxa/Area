@@ -3,6 +3,8 @@
 html{
   font-size: 15px;
   font-family: var(--font-family);
+  line-height: 140%;
+  letter-spacing: -0.5%;
 }
 
 .wrapper{
@@ -46,7 +48,6 @@ html{
   font-family: var(--second-family);
   font-size: 14px;
   font-weight: bold;
-  line-height: 140%;
   letter-spacing: -2.5%;
 }
 .header-top--nav-list--item:hover{
@@ -55,17 +56,12 @@ html{
 
 .header-top--btn{
   background-color: #485C11;
-  transition: .3s;
-}
-.header-top--btn:hover{
-  background-color: #8E9C78;
 }
 .header-top--btn-link{
   padding: 14px 24px;
   color: #ffffff;
   position:relative;
   transition: .3s;
-  line-height: 140%;
   letter-spacing: -2.5%;
 }
 
@@ -84,6 +80,9 @@ html{
 .header-top--btn-link:hover::after{
   top: 21%;
 }
+.header-body{
+  padding-bottom: 4.4rem;
+}
 
 .header-body--title{
   text-align: center;
@@ -95,28 +94,69 @@ html{
 }
 
 .header-body--content{
-
   min-width: auto;
   height: 24rem;
-  
   padding-top: 12.6rem;
   position: relative;
   overflow: hidden;
+  margin-bottom: 50px;
 }
+
 .header-body--content-image{
   position: absolute;
   left: 11%;
   bottom: -25%;
 }
+
 .header-body--content-color--block{
   height: 24rem;
   background-color: #8E9C78;
   border-radius: 30px;
 }
 
-/* ------------------------  Benefits section  ---------------------------- */
+.header-body--company-paragraph{
+  font-family: var(--second-family);
+  color: #6F6F6F;
+}
+.header-body--company-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
 
-{
+.header-body--company-list--item{
+  cursor: pointer;
+  transition: .3s;
+}
+.header-body--company-list--item:hover{
+  filter: invert(2);
+}
 
+.benefits-caption{
+  font-size:12px;
+  color: #485C11;
+  font-family: var(--third-family);
+  font-weight: 400;
+}
 
+.benefits-title{
+  font-size: 60px;
+  line-height: 90%;
+  letter-spacing: -3%;
+  font-weight: 400;
+}
+
+.benefits-paragraph{
+  color: #6F6F6F;
+  font-family: var(--second-family);
+}
+
+.benefits-list{
+  display: flex;
+  align-items: center;
+}
+
+.benefits-list--item{
+  border-top: 1px #6F6F6F;
 }
