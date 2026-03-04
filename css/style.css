@@ -370,10 +370,10 @@ html{
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   margin-top: 100px;
+  margin-bottom: 122px;
 }
 
 .specs-content--list-item{
-
   justify-self: center;
 }
 .specs-content--list-item--Area{
@@ -412,24 +412,80 @@ html{
   border-left: 1px #E9E9E9 solid;
   position: relative;
 }
-
-.specs-content--list-item--list-item--Area::before{
+.specs-content--list-item--list-item::before{
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url('../images/icons/Check\ icon.svg');
-  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  mask-image: url('../images/icons/Check\ icon.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
   position: absolute;
-  left: 8%;}
-.specs-content--list-item--list-item--Area path{
-  fill: #485C11;
+  left: 8%;
+  background-color: #6F6F6F;
+  top: 39%;
 }
+
+.specs-content--list-item--list-item--Area::before{
+  background-color: #485C11;
+}
+.specs-content--list-item--list-item--Area:first-child::before{
+  top: 41%;
+}
+#specs-content--list-item--list-itemNon::before{
+  mask-image: url('../images/icons/Close\ icon.svg');
+  top: 40%;
+}
+
 .specs-content--list-item--list-item--Area:first-child{
   padding-bottom: 1.78rem;
 }
 .specs-content--list-item--list-item--Area:last-child{
   border-bottom: 0px #E9E9E9 solid;
+}
+
+.specs-quote{
+  display: flex;
+  gap: 20px;
+}
+
+.specs-quote--block{
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+  max-width: 590px;
+  height: 669px;
+  position: relative;
+  justify-content: center;
+}
+.specs-quote--content{
+  max-width: 590px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px #E9E9E9 solid;
+}
+.specs-quote--blockquote{
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+.specs-quote--blockquote-quote{
+  font-size: 40px;
+  line-height: 105%;
+  letter-spacing: -4%;
+  max-width: 540px;
+  margin-bottom: 35px;
+}
+
+.specs-quote--blockquote-paragraph{
+  display: inline-block;
+  margin-left: 50px;
+  margin-bottom: 4px;
+  color: #000;
+}
+.specs-quote--blockquote-caption{
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 4px;
 }
 
 
