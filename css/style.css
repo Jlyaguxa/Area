@@ -547,5 +547,51 @@ html{
   background-image: url("../images/beach.jpg");
 }
 
-/* ---------------- Connect ------------------ */
+/* ---------------- Contact ------------------ */
 
+.contact-container{
+  border-top: 1px solid rgb(233, 233, 233);
+}
+.contact-inner{
+  width: 600px;
+  margin: 0 auto;
+  padding: 120px 0 ;
+  text-align: center;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+
+}
+.contact-title{
+  font-size: 60px;
+  line-height: 90%;
+  letter-spacing: -3%;
+}
+.contact-caption{
+  line-height: 130%;
+  letter-spacing: -1%;
+  font-family: var(--second-family);
+  color: #6F6F6F;
+}
+.contact-btn{
+  width: 100%;
+
+}
+.contact-btn--link{
+  color: #ffffff;
+  padding: 14px 24px;
+}
+.contact-btn--link::after{
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 20px;
+  background-image: url("../images/icons/Arrow.svg");
+  background-repeat: no-repeat;
+  margin-left: 6px; 
+  top: 29%;
+  position: absolute;
+  transition: .3s;
+}
+
+/* -----------------  footer --------------------- */
