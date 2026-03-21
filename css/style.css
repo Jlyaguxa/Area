@@ -42,6 +42,16 @@ html{
   font-family: var(--third-family);
   font-weight: 400;
 }
+.link{
+  padding: 14px 18px;
+  position:relative;
+  transition: .3s;
+  letter-spacing: -2.5%;
+  font-family: var(--second-family);
+  font-size: 14px;
+  letter-spacing: -2.5%;
+  font-weight: bold;
+}
 /* ------------------------- */
 
 .header-top--inner{
@@ -71,13 +81,6 @@ html{
 .header-top--btn-link{
   padding: 14px 24px;
   color: #ffffff;
-  position:relative;
-  transition: .3s;
-  letter-spacing: -2.5%;
-  font-family: var(--second-family);
-  font-size: 14px;
-  letter-spacing: -2.5%;
-  font-weight: bold;
 }
 
 .header-top--btn-link::after{
@@ -301,16 +304,6 @@ html{
   margin-top: 2.66rem;
 }
 
-.benefits-content--text-btn--link{
-  padding: 14px 18px;
-  position:relative;
-  transition: .3s;
-  letter-spacing: -2.5%;
-  font-family: var(--second-family);
-  font-size: 14px;
-  letter-spacing: -2.5%;
-  font-weight: bold;
-}
 .benefits-content--block{
   border-radius: 30px;
   display: flex;
@@ -354,16 +347,6 @@ html{
   justify-self: center;
 }
 
-.specs-btn--link{
-  padding: 14px 18px;
-  position:relative;
-  transition: .3s;
-  letter-spacing: -2.5%;
-  font-family: var(--second-family);
-  font-size: 14px;
-  letter-spacing: -2.5%;
-  font-weight: bold;
-}
 
 .specs-content--list{
   display: grid;
@@ -488,4 +471,81 @@ html{
   margin-top: 4px;
 }
 
+/* -------------------------------------- steps -------------------------------------------- */
+
+.steps {
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.steps-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 234px;
+  border-top: 1px solid rgb(233, 233, 233);
+}
+
+.steps-title--text {
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: -3%;
+  line-height: 90%;
+  padding: 40px 0px;
+}
+
+.steps-title--btn {
+  background-color: rgb(223, 236, 198);
+  width: 138px;
+  height: 48px;
+  justify-self: center;
+}
+
+.steps-list {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.steps-list--item{
+  border-top: 1px solid rgb(233, 233, 233);
+  font-family: var(--second-family);
+  color: #929292;
+  flex: 2 ;
+}
+.steps-list--item--numb{
+  font-size: 80px;
+  letter-spacing: -4%;
+  color: #929292;
+  line-height: 100%;
+}
+
+.steps-list--item-title{
+  font-size: 18px;
+  font-family: var(--font-family);
+  letter-spacing: -3%;
+  color: #000;
+  max-width: 360px;
+}
+
+.steps-list--item-caption{
+  color: #6F6F6F;
+  max-width: 360px;
+}
+
+.steps-list--item-block {      /* Needed for absolute positioning of the inner div */
+  border-radius: 30px;
+  max-width: 1200px;
+  height: 664px;               /* Give the section a fixed height (or use min-height) */
+  overflow: hidden;       /* Ensures the border-radius clips the image */
+}
+
+.steps-list--item-block--img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/beach.jpg");
+}
+
+/* ---------------- Connect ------------------ */
 
