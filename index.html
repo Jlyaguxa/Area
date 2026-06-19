@@ -15,28 +15,37 @@
   <div class="wrapper">
     <header class="header">
       <section class="header-top">
+        <div class="overlay" id="headerOverlay"></div>
         <div class="container">
           <article class="header-top--inner">
             <section class="header-top--logo"><a href="/">Area</a></section>
-            <nav class="header-top--nav">
+            <nav class="header-top--nav" id="headerNav">
               <ul class="header-top--nav-list">
                 <li class="header-top--nav-list--item" id="linkBenefits">
-                  <a href="#">Benefits</a>
+                  <a href="#benefits">Benefits</a>
                 </li>
                 <li class="header-top--nav-list--item" id="linkSpecifications">
-                  <a href="#">Specifications</a>
+                  <a href="#specs">Specifications</a>
                 </li>
                 <li class="header-top--nav-list--item" id="linkHow-to">
-                  <a href="#">How-to</a>
+                  <a href="#steps">How-to</a>
                 </li>
                 <li class="header-top--nav-list--item" id="linkContactUs">
-                  <a href="#">Contact Us</a>
+                  <a href="#contact">Contact Us</a>
                 </li>
               </ul>
-            </nav>
-            <section class="header-top--btn btn">
+              <section class="header-top--btn btn" id="mobileBtn">
               <a href="#" class="header-top--btn-link link">Learn More</a>
             </section>
+            </nav>
+            <section class="header-top--btn btn" id="desktopBtn">
+              <a href="#" class="header-top--btn-link link">Learn More</a>
+            </section>
+            <button class="header-top--burger" id="header-top--burger">
+              <div class="header-top--burger-line header-top--burger-line1"></div>
+              <div class="header-top--burger-line header-top--burger-line2"></div>
+              <div class="header-top--burger-line header-top--burger-line3"></div>
+            </button> 
           </article>
         </div>
       </section>
@@ -76,7 +85,7 @@
       </section>
     </header>
     <main class="main">
-      <section class="benefits">
+      <section class="benefits" id="benefits">
         <div class="container">
           <article class="benefits-inner">
             <p class="benefits-caption caption">Benefits</p>
@@ -152,7 +161,7 @@
           </article>
         </div>
       </section>
-      <section class="specs">
+      <section class="specs" id="specs">
         <div class="container">
           <article class="specs-inner">
             <p class="specs-caption caption">Specs</p>
@@ -179,7 +188,7 @@
                       support</li>
                   </ul>
                 </li>
-                <li class="specs-content--list-item">
+                <li class="specs-content--list-item specs-content--list-item2">
                   <h3 class="specs-content--list-item--title">WebSurge</h3>
                   <ul class="specs-content--list-item--list">
                     <li class="specs-content--list-item--list-item">Fast browsing</li>
@@ -192,7 +201,7 @@
                       Potential display errors</li>
                   </ul>
                 </li>
-                <li class="specs-content--list-item">
+                <li class="specs-content--list-item specs-content--list-item3">
                   <h3 class="specs-content--list-item--title">HyperView</h3>
                   <ul class="specs-content--list-item--list">
                     <li class="specs-content--list-item--list-item" id="specs-content--list-item--list-itemNon">Moderate
@@ -229,7 +238,7 @@
           </article>
         </div>
       </section>
-      <section class="steps">
+      <section class="steps" id="steps">
         <div class="container">
           <article class="steps-inner">
             <section class="steps-title">
@@ -259,7 +268,7 @@
           </article>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container contact-container">
           <article class="contact-inner">
             <h2 class="contact-title">Connect with us</h2>
@@ -276,19 +285,20 @@
           <nav class="footer-nav">
             <ul class="footer-nav--list">
               <li class="footer-nav--list-item">
-                <a href="#" class="footer-nav--list-item--link">Benefits</a>
+                <a href="#benefits" class="footer-nav--list-item--link">Benefits</a>
               </li>
               <li class="footer-nav--list-item">
-                <a href="#" class="footer-nav--list-item--link">Specifications</a>
+                <a href="#specs" class="footer-nav--list-item--link">Specifications</a>
               </li>
               <li class="footer-nav--list-item">
-                <a href="#" class="footer-nav--list-item--link">How-to</a>
+                <a href="#steps" class="footer-nav--list-item--link">How-to</a>
               </li>
             </ul>
           </nav>
           <section class="footer-text">
             <a class="footer-text--logo" href="#top"><img src="images/icons/Logo.svg" alt=""></a>
-            <p class="footer-text--copyright">© Area. 2026</p>
+            <p class="footer-text--copyright">© Area. </p>
+            <p class="footer-text--copyright footer-text--copyright2">2026</p>
             <p class="footer-text--rights">All Rights Reserved</p>
           </section>
         </article>
