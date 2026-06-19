@@ -1,5 +1,4 @@
 
-
 html{
   font-size: 15px;
   font-family: var(--font-family);
@@ -55,7 +54,7 @@ html{
   position:relative;
   transition: .3s;
   letter-spacing: -2.5%;
-  font-family: var(--second-family);
+  font-family: var(--fourth-family);
   font-size: 14px;
   letter-spacing: -2.5%;
   font-weight: bold;
@@ -71,14 +70,14 @@ html{
 }
 
 .header-top--logo{
-  font-family: var(--second-family);
+  font-family: var(--fourth-family);
   font-weight: medium;
   font-size: 30px;
 }
 .header-top--nav-list{
   display: flex;
   gap: 2rem;
-  font-family: var(--second-family);
+  font-family: var(--fourth-family);
   font-size: 14px;
   font-weight: bold;
   letter-spacing: -2.5%;
@@ -155,20 +154,20 @@ html{
 
 .header-body--title{
   text-align: center;
-  font-size: clamp(6rem, 14.5vw, 10rem);
+  font-size: 160px;
   font-family: var(--font-family);
   font-weight: 400;
   line-height: 85%;
   letter-spacing: -5%;
   margin: 72px 0 99px 0;
-  margin-bottom: clamp(3rem, 4vw, 6.25rem);
+  margin-bottom: 80px;
 }
 
 .header-body--content{
   display: flex;
   width: auto;
   height: 24rem;
-  padding-top: clamp(3rem,9vw,8rem);
+  padding-top: clamp(3rem,12vw,12rem);
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
@@ -178,15 +177,15 @@ html{
 
 .header-body--content-image{
 
-  width: clamp(650px, 70vw, 870px);
-  height: clamp(453px, 50vw, 608px);
-  transform: scale(1.01);
+  width: clamp(650px, 70vw, 907px);
+  height: clamp(453px, 50vw, 644px);
+  transform: scale(1.05);
 
 }
 
 .header-body--content-color--block{
   position: absolute;
-  height: 22rem;
+  height: 24rem;
   background-color: #8E9C78;
   border-radius: 30px;
   width: 100%;
@@ -438,7 +437,6 @@ html{
   line-height: 120%;
   letter-spacing: -8%;
   font-size: 25.71px;
-  font-family: var(--second-family);
   color: #6F6F6F;
   width: 100%;
   padding: 40px 0 20px 0;
@@ -446,9 +444,15 @@ html{
 
 .specs-content--list-item--title-Area{
   border-bottom: 1px #000 solid;
-  font-family: var(--second-family);
+  font-family: var(--fifth-family);
   color: #000000;
   padding-bottom: 19px;
+}
+.specs-content--list-item2{
+  font-family: var(--seventh-family);
+}
+.specs-content--list-item3{
+  font-family: var(--six-family);
 }
 
 
@@ -679,7 +683,7 @@ html{
 }
 
 .footer-nav--list-item{
-  font-family: var(--second-family);
+  font-family: var(--fourth-family);
   font-weight: bold;
   letter-spacing: -2.5%;
   font-size: 14px;

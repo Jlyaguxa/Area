@@ -1,36 +1,78 @@
-:root{
-  --font-family: "CrimsonText",serif;
-  --second-family: "DMSans", sans-serif;
+:root {
+  --font-family: "Crimson Text", serif;
+  --second-family: "DMSans-Regular", sans-serif;
   --third-family: "RobotoMono", sans-serif;
+  --fourth-family: "DMSans-Bold", sans-serif; 
+  --fifth-family: "DMSans-Medium", sans-serif;
+  --sixth-family:"RedditMono", sans-serif;
+  --seventh-family:"RethinkSans", sans-serif;
+
 }
 
 @font-face {
-  font-family: var(--font-family);
+  font-family: 'Crimson Text';   /* явно, как в :root */
   font-weight: 400;
   font-style: normal;
-  src: local('CrimsonText')
-    url("//fonts/CrimsonText-Regular.woff2"),
-    url("//fonts/CrimsonText-Regular.woff"),
-    url("//fonts/CrimsonText-Regular.otf");
-    font-display: swap;
+  src: local('☺'),    
+       url('../fonts/CrimsonText-Regular.woff2') format('woff2'),
+       url('../fonts/CrimsonText-Regular.woff') format('woff'),
+       url('../fonts/CrimsonText-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMSans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: local('☺'),    
+       url('../fonts/DMSans-Regular.woff') format('woff2'),
+       url('../fonts/DMSans-Regular.woff') format('woff');
+  font-display: swap;
 }
 @font-face {
-  font-family: var(--second-family);
-  font-weight: 400;
+  font-family: "DMSans-Medium";
+  font-weight: 500;
   font-style: normal;
-  src: local('DMSans')
-    url("//fonts/DMSans_36pt-Regular.woff2"),
-    url("//fonts/DMSans_36pt-Regular.woff"),
-    url("//fonts/DMSans_36pt-Regular.otf");
-    font-display: swap;
+  src: local('☺'),    
+       url('../fonts/DMSans-Medium.woff2') format('woff2'),
+       url('../fonts/DMSans-Medium.woff') format('woff');
+  font-display: swap;
 }
 @font-face {
-  font-family: var(--third-family);
+  font-family: "DMSans-Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local('☺'),    
+       url('../fonts/DMSans-Bold.woff2') format('woff2'),
+       url('../fonts/DMSans-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoMono";
   font-weight: 400;
   font-style: normal;
-  src: local('RobotoMono')
-    url("//fonts/RobotoMono-Regular.woff2"),
-    url("//fonts/RobotoMono-Regular.woff"),
-    url("//fonts/RobotoMono-Regular.otf");
-    font-display: swap;
+  src: local('☺'),    
+       url('../fonts/RobotoMono-Regular.woff2') format('woff2'),
+       url('../fonts/RobotoMono-Regular.woff') format('woff'),
+       url('../fonts/RobotoMono-Regular.otf') format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: "RedditMono";
+  font-weight: 500;
+  font-style: normal;
+  src: local('☺'),    
+       url('../fonts/RedditMono-Medium.woff2') format('woff2'),
+       url('../fonts/RedditMono-Medium.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: "RethinkSans";
+  font-weight: 500;
+  font-style: normal;
+  src: local('☺'),    
+       url('../fonts/RethinkSans-Medium.woff2') format('woff2'),
+       url('../fonts/RethinkSans-Medium.woff') format('woff');
+  font-display: swap;
 }
