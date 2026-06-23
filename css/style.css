@@ -810,99 +810,106 @@ html{
   }
 }
 
-@media(max-width:679px){
-  .container{
+@media (max-width: 679px) {
+  .container {
     padding: 0 15px;
   }
 
-  .overlay.active{
-    opacity: 20%;
+  /* Затемнение */
+  .overlay.active {
+    opacity: 0.2;
     z-index: 4;
-    
   }
-  .header-top--inner{
-    top: -3%;
-    left: 0.3%;
-    transform: translateX(0%);
+
+  /* Бургер – фиксирован, всегда видим */
+  .header-top--burger {
     display: flex;
     position: fixed;
-    flex-direction: column;
-    transition: 0.4s ease-in-out;
-    justify-content: space-between;
-    background-color: #ffffff;
-    align-items: center;
-    z-index: 5;
-    width: 89%;
-    padding: 30px 20px;
-    align-items: start;
-    box-shadow: 0 1px 16px rgba(0,0,0,0.1);
-    backdrop-filter: blur(0);
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    background: #ffffff;
     border-radius: 20px;
-  }
-  .header-top--inner.active{
-
-  }
-  .header-top--logo{
-    margin-bottom: 50px;
-  }
-  .header-top--nav{
-    right: 0;
-    top: 0;
-    transform: translateX(0%);
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    transition: 0.4s ease-in-out;
+    padding: 12px 3px;
+    width: 40px;
+    height: 40px;
     justify-content: space-between;
-    align-items: start;
-    backdrop-filter: blur(0);
-    min-width: 200px;
-    width: 100%;
-    padding: 0;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    cursor: pointer;
   }
-  
+
+  /* Контейнер меню – аккордеон */
+  .header-top--inner {
+    position: fixed;
+    top: -2.26%;
+    left: 0;
+    width: 90%;
+    height: 100vh;               /* полная высота, но ограничена max-height */
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 0 0 20px 20px;
+    z-index: 5;
+    padding: 20px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;            /* скрывает всё, что не помещается */
+    transition: max-height 0.4s ease, box-shadow 0.3s;
+    max-height: 50px;            /* закрыто – виден только логотип */
+    align-items: flex-start;
+  }
+
+  .header-top--inner.active {
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    /* max-height задаётся через JS */
+  }
+
+  /* Логотип – всегда виден */
+  .header-top--logo {
+    font-size: 28px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Навигация – занимает свободное место, чтобы кнопка была внизу */
+  .header-top--nav {
+    position: static;
+    backdrop-filter: none;
+    padding: 0;
+    min-width: auto;
+    width: 100%;
+    transform: none;
+    border-radius: 0;
+    flex: 1;                     /* растягивается */
+    display: flex;
+    flex-direction: column;
+    /* убираем opacity и transition – они не нужны */
+  }
+
   .header-top--nav-list {
     flex-direction: column;
-    align-items: start;
+    align-items: stretch;
+    gap: 0;
     width: 100%;
   }
 
   .header-top--nav-list--item {
-    border-top: 1px solid rgb(233, 233, 233);
+    border-top: 1px solid #e9e9e9;
+    padding: 18px 0 20px;
     width: 100%;
-    display: inline-block;
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-  .header-top--btn{
-    margin-top: 60px;
-    margin-bottom: 5px;
-  }
-  .header-top--burger{
-    display: flex;
-    z-index: 6;
-  }
-  .header-body--title{
-    font-size: 140px;
-  }
-  .benefits-title{
-    font-size: 50px;
-  }
-  .benefits-list{
-    grid-template-columns: 1fr; 
-  }
-  .benefits-content--text-title{
-    font-size: 50px;
   }
 
-  .specs-quote--blockquote-quote{
-    font-size: 32px;
-  }
-  .steps-title{
-    flex-direction: column;
+
+  .header-top--btn {
+    margin-top: auto;            
+    margin-bottom: 20px;
     justify-content: center;
-    align-items: start;
-    margin-bottom: 80px;
+  }
+
+  /* Скрываем десктопную кнопку */
+  #desktopBtn {
+    display: none;
   }
 }
 

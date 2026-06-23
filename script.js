@@ -1,54 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
   const burgerBtn = document.getElementById('header-top--burger');
-  const nav = document.getElementById('headerTopInner');
+  const menu = document.getElementById('headerTopInner');
   const overlay = document.getElementById('headerOverlay');
-  const links = nav.querySelectorAll('a');
+  const links = menu.querySelectorAll('a');
   const elements = document.querySelectorAll('.component');
-  const box = Array.from(document.querySelector('.header-top--inner'))
-  const headerBtn = document.querySelector('.header-top--btn')
-  const navList = document.querySelector('.header-top--nav')
-  // Функция открытия/закрытия
+
   function toggleMenu() {
     burgerBtn.classList.toggle('active');
-    nav.classList.toggle('active');
     overlay.classList.toggle('active');
-    
+
+    if (menu.classList.contains('active')) {
+      // Закрываем
+      menu.classList.remove('active');
+      menu.style.maxHeight = '50px';      // возвращаем закрытую высоту
+    } else {
+      // Открываем
+      menu.classList.add('active');
+      // Получаем полную высоту содержимого
+      const fullHeight = menu.scrollHeight;
+      menu.style.maxHeight = fullHeight + 'px';
+    }
   }
 
-  // Клик по бургеру
   burgerBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // чтобы клик не сработал на overlay
+    e.stopPropagation();
     toggleMenu();
   });
 
-  // Клик по overlay (затемнению) – закрываем
   overlay.addEventListener('click', () => {
-    if (nav.classList.contains('active')) {
+    if (menu.classList.contains('active')) {
       toggleMenu();
     }
   });
 
-  // Закрытие при клике на любую ссылку внутри меню
   links.forEach(link => {
     link.addEventListener('click', () => {
-      if (nav.classList.contains('active')) {
+      if (menu.classList.contains('active')) {
         toggleMenu();
       }
     });
   });
-  
-  box.addEventListener('click', (e) => {
-    e.preventDefault();
-    box.classList.toggle('active');
-    if(box.classList.contains('active')){
-      headerBtn.style.maxHeight = headerBtn.scrollHeight + 'px';
-      navList.style.maxHeight = headerBtn.scrollHeight + 'px';
-    } else{
-      headerBtn.style.maxHeight = 0;
-      navList.style.maxHeight = 0;
-    }
-  })
 
+  // Intersection Observer для анимации появления
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -57,5 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold: 0.1 });
+
   elements.forEach(el => observer.observe(el));
 });
