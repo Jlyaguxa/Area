@@ -911,6 +911,9 @@ html{
   #desktopBtn {
     display: none;
   }
+  .header-body--title{
+    font-size: 116px;
+  }
 }
 
 @media(max-width:480px){
