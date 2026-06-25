@@ -5,6 +5,7 @@ html{
   line-height: 140%;
   letter-spacing: -0.5%;
   scroll-behavior: smooth;
+
 }
 .overlay{
   z-index: -100;
@@ -457,8 +458,7 @@ html{
 
 
 .specs-content--list{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 122px;
@@ -622,6 +622,7 @@ html{
   gap: 20px;
   width: 100%;
   margin-bottom: 120px;
+  overflow-x: auto;
 }
 
 .steps-list--item{
@@ -629,6 +630,7 @@ html{
   font-family: var(--second-family);
   color: #929292;
   flex: 2 ;
+  min-width: 210px;
 }
 .steps-list--item--numb{
   font-size: 80px;
@@ -780,12 +782,20 @@ html{
   .specs-quote--blockquote{
   margin-top: 0px;
   }
+  .specs-content--list {
+    overflow-x: auto;   
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  .specs-content--list-item--list{
+    min-width: 277px;
+  }
+  .specs-content--list-item--list-item {
+    min-width: 171px;
+  }
+
 }
 @media(max-width:815px){
-  .specs-content--list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;    /* две колонки для второго и третьего */
-  }
   .specs-content--list-item--list{
     border: solid 1px #E9E9E9;
   }
@@ -914,11 +924,18 @@ html{
   .header-body--title{
     font-size: 116px;
   }
+  .benefits-list{
+    grid-template-columns: 1fr;
+  }
+  .steps-title--btn--link{
+    min-width: 97.5px;
+  }
 }
 
 @media(max-width:480px){
   .header-body--title{
     font-size: 76px;
+    margin-top: 120px;
   }
   .benefits-content--block{
     max-height: 385px;
@@ -931,8 +948,8 @@ html{
   .specs-title{
     font-size: 50px;
   }
-  .specs-content--list {
-    grid-template-columns: 1fr ;   /* две колонки для второго и третьего */
+  .specs-quote--blockquote-quote{
+    font-size: 32px;
   }
   .steps-title--text{
     font-size: 50px;
